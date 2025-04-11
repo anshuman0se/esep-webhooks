@@ -17,7 +17,7 @@ public class Function
         {
             dynamic json = JsonConvert.DeserializeObject<dynamic>(input.ToString());
             string issueUrl = json.issue.html_url;
-            string slackMessage = JsonConvert.SerializeObject(new { text = $"New GitHub Issue Created: {issueUrl}" });
+            string slackMessage = JsonConvert.SerializeObject(new { text = $"Issue Created: {issueUrl}" });
 
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable("SLACK_URL"))
