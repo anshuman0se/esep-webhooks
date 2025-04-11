@@ -24,7 +24,7 @@ public class Function
             context.Logger.LogInformation($"Issue URL: {issueUrl}");
             string slackMessage = JsonConvert.SerializeObject(new
             {
-                text = $"📢 New GitHub Issue Created: {issueUrl}"
+                text = $"New GitHub Issue Created: {issueUrl}"
             });
             string slackUrl = Environment.GetEnvironmentVariable("SLACK_URL");
             if (string.IsNullOrEmpty(slackUrl))
