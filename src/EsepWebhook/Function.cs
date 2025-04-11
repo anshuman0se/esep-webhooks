@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 
 namespace EsepWebhook;
-
 public class Function
 {
     public string FunctionHandler(object input, ILambdaContext context)
